@@ -11,8 +11,16 @@
     - subitem 2.1
     - subitem 2.2
 
-*item 1
- *item 1.2
+* item 1
+    * item 1.2
+
++ test
+    + testtest
+    + testtest
++ test
+    + testtesttest
+
+
 
 1. first
  1. first 1.1
