@@ -38,6 +38,6 @@
 
 ### image 
 
-![smile](https://www.google.com/search?sca_esv=c5d51d36d3e24420&rlz=1C1ONGR_enSG1107SG1108&sxsrf=ADLYWIIVlMQSX--CU8O2U5McwC0Il_DDmA:1731856100022&q=happy&udm=2&fbs=AEQNm0Aa4sjWe7Rqy32pFwRj0UkWd8nbOJfsBGGB5IQQO6L3J603JUkR9Y5suk8yuy50qOYMMWTNCTu57lKPsZpPcfqPxsr7W9ht6aSHdZDeYOHGXjlTr9vFv2xeJBxGwfKNFiSA3iT6TUbct8mo3-5FBJ76Dm3mQELK6Fak3hzmoE5NrrkKPDbJhkK_veZD8Wy9JYeu7llN&sa=X&ved=2ahUKEwiMhZPd0uOJAxWIxjgGHSPPAXAQtKgLegQIExAB&biw=1278&bih=910&dpr=1#vhid=UiXOcJ6-JfkmEM&vssid=mosaic)
+![smile](image.png)
 
 [OpenAI](https://openai.com)
