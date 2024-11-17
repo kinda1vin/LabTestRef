@@ -1,110 +1,190 @@
-Here’s the **Lab 1** content in `.md` format designed to serve as your notes:
+Here's a comprehensive set of notes for Labs 1, 2, and 3 in Markdown format, integrating key instructions and additional details to enhance understanding.
 
-```markdown
-# ET0735 – Lab 1 (Introduction to Git and GitHub)
+---
 
-## Objectives
-- Learn Git/GitHub workflow for configuration management.
-- Perform Git operations:
-  - Initialize a Git repository.
-  - Commit changes.
-  - Create and manage branches.
-- Set up a GitHub account and push to a remote repository.
-- Work with Git submodules.
+# ET0735 DevOps for AIoT
 
-## Activities
-### 1. Installation and Setup
-- Ensure .NET Framework (4.7+) is installed.
-- Download Git: [Git SCM](https://git-scm.com/download/win).
-- Configure Git user:
-  ```bash
-  git config --global user.name "Your Name"
-  git config --global user.email "your.email@example.com"
-  git config --list
-  ```
+## Laboratory Notes
 
-### 2. Creating a Local Repository
-- Create a new directory:
-  ```bash
-  mkdir Local_Git_Repository
-  cd Local_Git_Repository
-  git init
-  ```
+### Lab 1: Introduction to Git and GitHub
 
-### 3. Committing Files
-- Create a Python file `HelloWorld.py`:
-  ```python
-  print("Hello World!")
-  ```
-- Add to the staging area:
-  ```bash
-  git add HelloWorld.py
-  ```
-- Commit changes:
-  ```bash
-  git commit -m "Initial commit: Added HelloWorld.py"
-  ```
+#### Objectives
+- Understand and use Git for version control.
+- Set up and configure Git and GitHub.
+- Learn essential Git operations: commit, branch, tag, and push.
 
-### 4. Branch Management
-- List branches:
-  ```bash
-  git branch
-  ```
-- Create and switch to a new branch:
-  ```bash
-  git branch bug-fix1
-  git checkout bug-fix1
-  ```
+#### Procedures
+1. **Git Installation**  
+   - Install Git using [Git SCM](https://git-scm.com/download/win).
+   - Configure user details:
+     ```bash
+     git config --global user.name "Your Name"
+     git config --global user.email "your_email@example.com"
+     ```
+   - Verify configuration:
+     ```bash
+     git config --list
+     ```
 
-### 5. Pushing to GitHub
-- Add a remote repository:
-  ```bash
-  git remote add origin https://github.com/<your-username>/<repo-name>.git
-  ```
-- Push changes:
-  ```bash
-  git push --set-upstream origin master
-  ```
+2. **Creating a Local Repository**  
+   - Navigate to the desired folder:
+     ```bash
+     cd path/to/your/folder
+     ```
+   - Initialize Git:
+     ```bash
+     git init
+     ```
 
-### 6. README.md Creation
-- Create a `README.md` file with Markdown syntax:
-  ```markdown
-  # ET0735 – Lab 1 (Introduction to Git and GitHub)
-  ```
-- Commit and push the README to GitHub.
+3. **Committing Files**  
+   - Add files to the staging area:
+     ```bash
+     git add filename
+     ```
+   - Commit changes:
+     ```bash
+     git commit -m "Your commit message"
+     ```
 
-### 7. Tags and Releases
-- Add a tag:
+4. **Branches and Merging**  
+   - Create a branch:
+     ```bash
+     git branch branch_name
+     ```
+   - Switch to the branch:
+     ```bash
+     git checkout branch_name
+     ```
+   - Merge changes into `master`:
+     ```bash
+     git merge branch_name
+     ```
+
+5. **Pushing to GitHub**  
+   - Add a remote:
+     ```bash
+     git remote add origin repository_url
+     ```
+   - Push to remote:
+     ```bash
+     git push -u origin master
+     ```
+
+#### Activities
+- Create a GitHub repository and practice creating README.md files.
+- Experiment with tags:
   ```bash
-  git tag -a v1.0 -m "Initial release"
+  git tag -a v1.0 -m "Initial Release"
   git push origin v1.0
   ```
 
-### 8. Git Submodules
-- Add a submodule:
-  ```bash
-  git submodule add <repository-url>
+---
+
+### Lab 2: Introduction to Python
+
+#### Objectives
+- Implement Python programs with basic operations.
+- Utilize functions, input/output, and list data structures.
+
+#### Procedures
+1. **Python and VS Code Installation**  
+   - Install Python 3 from [python.org](https://www.python.org/downloads/).
+   - Install VS Code from [Visual Studio Code](https://code.visualstudio.com/).
+
+2. **Creating Python Projects**  
+   - Create a project folder:
+     ```bash
+     mkdir Lab2
+     cd Lab2
+     ```
+   - Open the folder in VS Code and add a Python file, e.g., `Lab2.py`.
+
+3. **Python Basics**
+   - Write a basic Python script:
+     ```python
+     print("ET0735 - Lab 2 - Introduction to Python")
+     ```
+   - Run the script in VS Code.
+
+4. **Implementing BMI Calculation**  
+   - Function implementation:
+     ```python
+     def calculate_bmi(height, weight):
+         bmi = weight / (height ** 2)
+         return bmi
+     ```
+
+5. **GitHub Integration**
+   - Add and push changes to GitHub following the Lab 1 workflow.
+
+---
+
+### Lab 3: Developing Software Unit Tests
+
+#### Objectives
+- Learn to write and run unit tests using PyTest.
+
+#### Procedures
+1. **PyTest Setup**  
+   - Install PyTest:
+     ```bash
+     pip install pytest
+     ```
+   - Configure PyTest in VS Code.
+
+2. **Writing Test Cases**  
+   - Create a test file, e.g., `Test_Lab3.py`:
+     ```python
+     import pytest
+     from Lab3 import bubble_sort
+
+     def test_bubble_sort_ascending():
+         assert bubble_sort([3, 2, 1], "asc") == [1, 2, 3]
+     ```
+
+3. **Executing Tests**  
+   - Run all tests:
+     ```bash
+     pytest
+     ```
+   - View results in the VS Code Testing tab.
+
+4. **Integrating with Lab 2 Code**  
+   - Import and test BMI functionality:
+     ```python
+     from Lab2.bmi import calculate_bmi
+
+     def test_bmi_underweight():
+         assert calculate_bmi(1.7, 50) == -1
+     ```
+
+5. **GitHub Integration**  
+   - Add and commit test cases:
+     ```bash
+     git add .
+     git commit -m "Add unit tests"
+     git push
+     ```
+
+---
+
+### Additional Hints and Best Practices
+
+#### Markdown Formatting
+- Use headings (`#`, `##`, `###`) to organize content.
+- Embed code blocks with backticks (` ``` `).
+- Add lists:
+  - Unordered: `- Item`
+  - Ordered: `1. Item`
+- Include links and images:
+  ```markdown
+  [Python Docs](https://www.python.org/doc/)
+  ![Example](path/to/image.png)
   ```
-- Commit and push changes:
-  ```bash
-  git add .gitmodules
-  git commit -m "Added submodule"
-  git push
-  ```
 
-## Notes
-- Use `git diff` to compare changes.
-- Experiment with:
-  - Markdown for formatting.
-  - Embedding links and images in your README.
+#### Focus Areas
+- Exercise 4 and 5 from Lab 3 are crucial. Practice using PyTest assertions extensively.
 
-## Hints
-- Focus on **exercises 4 and 5** from Lab 3 for `pytest` implementation.
-- Practice Markdown formatting:
-  - Code blocks: \`\`\`
-  - Lists: `-` or `1.`
-  - Headings: `#`, `##`, etc.
-  - Links: `[text](URL)`
-```
+---
 
-Save the above text in a file named `README.md` to act as your notes for Lab 1.
+This `.md` file format provides structured and detailed lab notes for easy reference and future use.
