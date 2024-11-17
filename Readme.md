@@ -6,10 +6,10 @@
 `python hw.py`
 
 - item 1
- - sub-item 1.1
+    - sub-item 1.1
 - item 2
- - subitem 2.1
- - subitem 2.2
+    - subitem 2.1
+    - subitem 2.2
 
 *item 1
  *item 1.2
