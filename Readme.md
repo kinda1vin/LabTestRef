@@ -38,6 +38,6 @@
 
 ### image 
 
-![smile](https://en.wikipedia.org/wiki/Smiley#/media/File:Smiley.svg)
+![smile](image.png)
 
 [OpenAI](https://openai.com)
