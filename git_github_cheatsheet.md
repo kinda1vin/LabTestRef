@@ -109,6 +109,11 @@
   git remote add origin <repository_url>
   ```
 
+- **Change remote repository**:
+  ```bash
+  git remote set-url origin <repository_url>
+  ```
+
 - **View remote repositories**:
   ```bash
   git remote -v
